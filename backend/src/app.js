@@ -9,7 +9,13 @@ const app = express()
 const allowedOrigins = ['http://localhost:5173','https://email-authentication-backend.onrender.com'];
 
 app.use(cors({
-    origin: allowedOrigins,
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true)
+    } else {
+        callback(new Error('Not allowed by CORS'))
+    }
+},
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // If your frontend is sending cookies or authentication headers
   }));
