@@ -6,7 +6,7 @@ const ErrorHandling = require("./middleware/ErrorHandling")
 const cors = require('cors')
 const app = express()
 
-const allowedOrigins = ['http://localhost:5173','https://email-authentication-mgfm.vercel.app/login'];
+const allowedOrigins = ['http://localhost:5173','https://email-authentication-backend.onrender.com'];
 
 app.use(cors({
     origin: allowedOrigins,
