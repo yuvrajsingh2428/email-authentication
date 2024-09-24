@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import toast from 'react-hot-toast'
 import { AxiosClient } from '../environment'
 import { useNavigate } from 'react-router-dom'

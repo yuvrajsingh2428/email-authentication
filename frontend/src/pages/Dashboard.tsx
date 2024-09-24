@@ -20,7 +20,7 @@ const location = useLocation()
           else{
             setLoading(false)
           }
-      }, [location])
+      }, [location, navigate])
   if (loading){
     return <div>loading...</div>
   }
