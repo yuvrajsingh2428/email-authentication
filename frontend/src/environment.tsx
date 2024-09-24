@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const AxiosClient = axios.create({
-    baseURL: 'http://localhost:4000/api/v1/auth'
-})
+  baseURL: import.meta.env.VITE_REACT_APP_BACKEND_BASEURL,
+});
